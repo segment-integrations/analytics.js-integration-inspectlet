@@ -1,4 +1,9 @@
 
+1.0.4 / 2016-04-20
+==================
+
+  * analytics.track should forward properties to tagSession
+
 1.0.3 / 2015-06-30
 ==================
 
