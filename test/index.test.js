@@ -96,8 +96,8 @@ describe('Inspectlet', function() {
       });
 
       it('should tag the session', function() {
-        analytics.track('event');
-        analytics.called(window.__insp.push, ['tagSession', 'event']);
+        analytics.track('event', {testProperty: true});
+        analytics.called(window.__insp.push, ['tagSession', 'event', {testProperty: true}]);
       });
     });
 
