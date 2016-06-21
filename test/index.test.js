@@ -1,8 +1,9 @@
+'use strict';
 
-var Analytics = require('analytics.js-core').constructor;
-var integration = require('analytics.js-integration');
-var tester = require('analytics.js-integration-tester');
-var sandbox = require('clear-env');
+var Analytics = require('@segment/analytics.js-core').constructor;
+var integration = require('@segment/analytics.js-integration');
+var tester = require('@segment/analytics.js-integration-tester');
+var sandbox = require('@segment/clear-env');
 var Inspectlet = require('../lib/');
 
 describe('Inspectlet', function() {
@@ -96,8 +97,8 @@ describe('Inspectlet', function() {
       });
 
       it('should tag the session', function() {
-        analytics.track('event', {testProperty: true});
-        analytics.called(window.__insp.push, ['tagSession', 'event', {testProperty: true}]);
+        analytics.track('event', { testProperty: true });
+        analytics.called(window.__insp.push, ['tagSession', 'event', { testProperty: true }]);
       });
     });
 
